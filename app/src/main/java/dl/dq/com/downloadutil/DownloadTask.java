@@ -317,7 +317,7 @@ public class DownloadTask extends Handler {
     private int getProgress(long top, long below) {
         double result = new BigDecimal((float)top / below)
                 .setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
-        return (int)result * 100;
+        return (int) (result * 100);
     }
 
     private double willTakeTime(long remain){
